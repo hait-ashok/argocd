@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/hait-ashok/argocd.git
-    targetRevision: HEAD
+    targetRevision: main
     path: app-1
   destination:
     server: https://kubernetes.default.svc
@@ -21,6 +21,6 @@ spec:
       allowEmpty: false
     syncOptions:
       - Validate=true
-      - CreateNamespace=false
+      - CreateNamespace=true
       - PrunePropagationPolicy=foreground
       - PruneLast=true
